@@ -21,9 +21,32 @@ func variableTypeDeduction() {
 	fmt.Println(e, f)
 }
 
+func enums() {
+	//枚举类型
+	const (
+		cpp = iota
+		_
+		python
+		java
+		golang
+	)
+	fmt.Println(cpp, python, java, golang)
+
+	const (
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+	fmt.Println(b, kb, mb, gb, tb, pb)
+}
+
 func main() {
 	fmt.Println("Hello world")
 	variableZeroValue()
 	variableInitialValue()
 	variableTypeDeduction()
+	enums()
 }
